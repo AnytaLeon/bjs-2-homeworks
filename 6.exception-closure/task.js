@@ -1,6 +1,7 @@
 ﻿function parseCount(count) {
- if (Number.parseFloat(count)) {
-    return Number.parseFloat(count)
+    let parseCount = Number.parseFloat(count);
+ if (parseCount) {
+    return parseCount
  } else {
     throw new Error('Невалидное значение')
  }
@@ -19,9 +20,9 @@ class Triangle {
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
-        if (this.sideA + this.sideB < this.sideC || 
-            this.sideA + this.sideC < this.sideB || 
-            this.sideB + this.sideC < this.sideA) {
+        if (sideA + sideB < sideC || 
+            sideA + sideC < sideB || 
+            sideB + sideC < sideA) {
             throw new Error('Треугольник с такими сторонами не существует')
          }
     }
